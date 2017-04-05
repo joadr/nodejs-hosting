@@ -5,6 +5,11 @@
       "key": "APP_LOCATION",
       "description": "The location of the React app folder in the repository. Set \".\" for root",
       "defaultValue": "."
+    },
+    {
+      "key": "PHANTOM_WAIT_TIME",
+      "description": "The extra time PhantomJS waits for your page to load, in milliseconds",
+      "defaultValue": "5000"
     }
   ]
 }
