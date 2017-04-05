@@ -5,7 +5,11 @@ import url from 'url'
 import fs from 'fs'
 
 const app = express()
-const basePath = '../code/build'
+
+console.log('App location', process.env.APP_LOCATION)
+const appInProject = process.env.APP_LOCATION === '.' ? '' : process.env.APP_LOCATION + '/'
+const basePath = '/home/deploy/app/' + appInProject + 'build'
+console.log(basePath, 'base path')
 
 app.get('*', async function (request, response) {
   const compile = shouldCompile(request)
