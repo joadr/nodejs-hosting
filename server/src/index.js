@@ -7,7 +7,7 @@ import fs from 'fs'
 const app = express()
 
 const appInProject = process.env.APP_LOCATION === '.' ? '' : process.env.APP_LOCATION + '/'
-const basePath = '/Users/nicolaslopezj/Code/Node/labs/projects/hosting/home/build' || '/home/deploy/app/' + appInProject + 'build'
+const basePath = '/home/deploy/app/' + appInProject + 'build'
 
 app.get('*', async function (request, response) {
   const compile = shouldCompile(request)
