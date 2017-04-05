@@ -33,4 +33,4 @@ sudo yarn install
 sudo yarn global add babel-cli
 
 echo "====> Starting server..."
-sh /home/deploy/script/run.sh
+nohup sh /home/deploy/script/run.sh > /dev/null 2>&1 &

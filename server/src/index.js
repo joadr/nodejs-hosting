@@ -26,6 +26,6 @@ app.get('*', async function (request, response) {
   }
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+app.listen(80, function () {
+  console.log('Orion Hosting React app started')
 })
