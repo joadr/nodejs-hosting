@@ -8,9 +8,9 @@ echo "====> Updating apt registry..."
 sudo apt-get update > /dev/null
 
 echo "====> Installing nodejs and yarn..."
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - > /dev/null
 sudo apt-get install nodejs -y > /dev/null
-sudo npm install yarn -g
+sudo npm install yarn -g > /dev/null
 
 echo "====> Install phantomjs deps..."
 sudo apt-get install build-essential g++ flex bison gperf ruby perl \
