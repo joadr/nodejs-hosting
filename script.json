@@ -1,0 +1,10 @@
+{
+  "language": "React PhantomJS",
+  "envVars": [
+    {
+      "key": "APP_LOCATION",
+      "description": "The location of the React app folder in the repository. Set \".\" for root",
+      "defaultValue": "."
+    }
+  ]
+}
