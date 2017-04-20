@@ -3,6 +3,7 @@ import getContent from './getContent'
 import shouldCompile from './shouldCompile'
 import url from 'url'
 import fs from 'fs'
+import mime from 'mime'
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.get('*', async function (request, response) {
   } else {
     const existsAndNoFolder = fs.existsSync(basePath + pathname) && !fs.lstatSync(basePath + pathname).isDirectory()
     const path = existsAndNoFolder ? basePath + pathname : basePath + '/index.html'
+    response.writeHead(200, {'Content-Type': mime.lookup(path)})
     console.log('serving', path)
     fs.createReadStream(path).pipe(response)
   }
