@@ -13,6 +13,7 @@ sudo npm install yarn -g > /dev/null
 # Go to app folder
 cd app
 cd $APP_LOCATION # Add an if here
+echo "MONGO URL: $MONGO_URL"
 
 echo "====> App dependencies..."
 sudo yarn install
